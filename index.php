@@ -11,9 +11,9 @@ error_reporting(E_ALL);
 require_once ("vendor/autoload.php");
 $fff = Base::instance();
 $fff->route("GET /", function (){
-    echo "<h1>Howdy Partner</h1>";
-    /*$view = new Template();
-    echo $view->render("views/home.html");*/
+    /*echo "<h1>Howdy Partner</h1>";*/
+    $view = new Template();
+    echo $view->render("views/home.html");
 });
 $fff->run();
 ?>
